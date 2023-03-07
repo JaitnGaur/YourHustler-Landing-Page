@@ -17,7 +17,7 @@
           class="brand-logo"
           width="121"
           height="80"
-          src="/images/cargo-transport.png"
+          src="./images/cargo-transport.png"
         />
         <nav>
           <ul class="d-flex nav-lists">
@@ -132,8 +132,8 @@
           </p>
 
           <div class="container nav d-flex">
-            <button class="primary-btn prev font-darkblue mr-s"><</button>
-            <button class="primary-btn next font-darkblue">></button>
+            <button class="primary-btn prev font-darkblue mr-s text-m"><</button>
+            <button class="primary-btn next font-darkblue text-m">></button>
           </div>
           <div class="carousel-container">
             <div class="inner-carousel">
@@ -177,21 +177,7 @@
                 <div class="card-container">
                   <div class="card card9"></div>
                 </div>
-                <div class="card-container">
-                  <div class="card card10">1</div>
-                </div>
-                <div class="card-container">
-                  <div class="card card10">1</div>
-                </div>
-                <div class="card-container">
-                  <div class="card card10">1</div>
-                </div>
-                <div class="card-container">
-                  <div class="card card11">1</div>
-                </div>
-                <div class="card-container">
-                  <div class="card card12">12</div>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -243,6 +229,73 @@
           </div>
         </div>
       </section>
+      <section>
+        <div>
+          <button class="js-prev">prev</button>
+          <button class="js-next">next</button>
+        </div>
+        <div class="carouselwala-container">
+          <div class="innerwala d-flex">
+          <div class="card card1"></div>
+          <div class="card card2"></div>
+          <div class="card card3"></div>
+          <div class="card card4"></div>
+          <div class="card card5"></div>
+          <div class="card card6"></div>
+          <div class="card card7"></div>
+        </div>
+      </div>
+        </div>
+      </section>
+      <script>
+        let previous=document.querySelector('.js-prev');
+        let nextone=document.querySelector('.js-next');
+        let carouserl_cont = document.querySelector('.carouselwala-container');
+        carouserl_cont.addEventListener('scroll',(e)=>{
+          console.log(document.querySelector(".card1").offsetLeft)
+          console.log(document.querySelector(".card1").offsetTop)
+          console.log(document.querySelector(".card1").offsetWidth)
+          console.log(carouserl_cont.scrollX)
+
+        })
+      </script>
+      <style>
+        .card {
+          height: 325px;
+          width: 380px;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+        .carouselwala-container {
+          display: flex;
+          width: 1000px;
+         column-gap: 4px;
+          overflow: auto;
+        margin-left: auto;
+        }
+    
+        .card1 {
+          background: url("./images/carousel-1.png");
+        }
+        .card2 {
+          background: url("./images/carousel-2.png");
+        }
+        .card3 {
+          background: url("./images/carousel-3.png");
+        }
+        .card4 {
+          background: url("./images/carousel-1.png") ;
+        }
+        .card5 {
+          background: url("./images/carousel-2.png");
+        }
+        .card6 {
+          background: url("./images/carousel-3.png");
+        }
+        .card7 {
+          background: url("./images/carousel-1.png") ;
+        }
+      </style>
     </main>
     <footer class="section-footer">
       <div class="container">

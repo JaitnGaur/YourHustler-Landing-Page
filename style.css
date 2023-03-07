@@ -153,6 +153,7 @@ header.active {
     background-color: #0c1536;
     margin-bottom: 100px;
 }
+
 .hero-section .container {
     min-height:654px;
 }
@@ -305,6 +306,9 @@ header.active {
 
 
 @media(max-width:768px) {
+    .hero-section{
+        background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('./images/hero-truck.png') ;
+    }
     .ham-button {
         height: 40px;
         width: 40px;
