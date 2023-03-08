@@ -45,26 +45,35 @@ hambtn.addEventListener("click", function () {
     head.classList.toggle("active")
 });
 //----------carousel------------
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-const carousel = document.querySelector(".carousel-container");
-const track = document.querySelector(".track");
-let width = carousel.offsetWidth;
-let index = 0;
-window.addEventListener("resize", function () {
-    width = carousel.offsetWidth;
-});
-next.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (index == 0) {
-        index = index + 1;
-        track.style.transform = "translateX(" + index * -width + "px)";
+let previous = document.querySelector(".prev");
+let nextone = document.querySelector(".next");
+let carouserl_cards = document.querySelectorAll(".card");
+let carousel_container = document.querySelector(".carousel-container");
 
+let carcount = 0;
+let swiperight = 380;
+nextone.addEventListener("click", () => {
+    if (carcount < 4) {
+        console.log("next clicked");
+        // carouserl_cards.forEach(
+        //     (i) => (i.style.transform = "translateX(-" + swiperight + "px)")
+        // );
+        carousel_container.scroll(swiperight, 0)
+        carcount += 1;
+        swiperight += 380;
+        goright -= 380;
     }
 });
-prev.addEventListener("click", function () {
-    if (index != 0) {
-        index = index - 1;
-        track.style.transform = "translateX(" + index * -width + "px)";
+let goright = 380;
+previous.addEventListener("click", () => {
+    if (carcount != 0) {
+        console.log("prev clicked");
+        // carouserl_cards.forEach(
+        //     (i) => (i.style.transform = "translateX(" + goright + "px)")
+        // );
+        carousel_container.scroll(-goright, 0)
+        goright += 380;
+        carcount -= 1;
+        swiperight -= 380;
     }
 });

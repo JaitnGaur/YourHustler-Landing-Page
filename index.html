@@ -121,65 +121,51 @@
         </div>
       </section>
       <section class="section-solution">
-        <div class="container">
-          <h2 class="fw-b text-xl font-white mb-m">
-            Solutions Tailored<br />
-            to Your Needs
-          </h2>
-          <p class="text-s font-white section-solution__para mb-xl">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore
-          </p>
+        <h2 class="fw-b text-xl font-white mb-m">
+          Solutions Tailored<br />
+          to Your Needs
+        </h2>
+        <p class="text-s font-white section-solution__para mb-xl">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore
+        </p>
 
-          <div class="container nav d-flex">
-            <button class="primary-btn prev font-darkblue mr-s text-m"><</button>
-            <button class="primary-btn next font-darkblue text-m">></button>
+        <div class="container nav d-flex mb-sm">
+          <button class="primary-btn prev font-darkblue mr-s text-m"><</button>
+          <button class="primary-btn next font-darkblue text-m">></button>
+        </div>
+        <div class="carousel-container">
+          <div card></div>
+          <div class="card card1 d-flex align-center">
+            <span class="carousel-text text-m font-white fw-b"
+              >Sand & Aggregate Deliveries
+            </span>
           </div>
-          <div class="carousel-container">
-            <div class="inner-carousel">
-              <div class="track">
-                <div class="card-container">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <img
-                    src=" https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <img
-                    src=" https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <img
-                    src=" https://cdn.pixabay.com/photo/2014/08/29/03/02/horse-430441_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <img
-                    src=" https://cdn.pixabay.com/photo/2014/12/08/17/52/mare-561221_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <img
-                    src=" https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_960_720.jpg"
-                  />
-                </div>
-                <div class="card-container">
-                  <div class="card card7"></div>
-                </div>
-                <div class="card-container">
-                  <div class="card card8"></div>
-                </div>
-                <div class="card-container">
-                  <div class="card card9"></div>
-                </div>
-              
-              </div>
-            </div>
+          <div class="card card2">
+            <span class="carousel-text text-m font-white fw-b">Haul Outs </span>
+          </div>
+          <div class="card card3">
+            <span class="carousel-text text-m font-white fw-b"
+              >Hourly Truck Rentals
+            </span>
+          </div>
+          <div class="card card4">
+            <span class="carousel-text text-m font-white fw-b"
+              >Speciality Services
+            </span>
+          </div>
+          <div class="card card5">
+            <span class="carousel-text text-m font-white fw-b"
+              >Sand & Aggregate Deliveries</span
+            >
+          </div>
+          <div class="card card6">
+            <span class="carousel-text text-m font-white fw-b">Haul Outs</span>
+          </div>
+          <div class="card card7">
+            <span class="carousel-text text-m font-white fw-b"
+              >Hourly Truck Rentals</span
+            >
           </div>
         </div>
       </section>
@@ -229,73 +215,9 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <button class="js-prev">prev</button>
-          <button class="js-next">next</button>
-        </div>
-        <div class="carouselwala-container">
-          <div class="innerwala d-flex">
-          <div class="card card1"></div>
-          <div class="card card2"></div>
-          <div class="card card3"></div>
-          <div class="card card4"></div>
-          <div class="card card5"></div>
-          <div class="card card6"></div>
-          <div class="card card7"></div>
-        </div>
-      </div>
-        </div>
-      </section>
-      <script>
-        let previous=document.querySelector('.js-prev');
-        let nextone=document.querySelector('.js-next');
-        let carouserl_cont = document.querySelector('.carouselwala-container');
-        carouserl_cont.addEventListener('scroll',(e)=>{
-          console.log(document.querySelector(".card1").offsetLeft)
-          console.log(document.querySelector(".card1").offsetTop)
-          console.log(document.querySelector(".card1").offsetWidth)
-          console.log(carouserl_cont.scrollX)
 
-        })
-      </script>
-      <style>
-        .card {
-          height: 325px;
-          width: 380px;
-          flex-shrink: 0;
-          object-fit: cover;
-        }
-        .carouselwala-container {
-          display: flex;
-          width: 1000px;
-         column-gap: 4px;
-          overflow: auto;
-        margin-left: auto;
-        }
-    
-        .card1 {
-          background: url("./images/carousel-1.png");
-        }
-        .card2 {
-          background: url("./images/carousel-2.png");
-        }
-        .card3 {
-          background: url("./images/carousel-3.png");
-        }
-        .card4 {
-          background: url("./images/carousel-1.png") ;
-        }
-        .card5 {
-          background: url("./images/carousel-2.png");
-        }
-        .card6 {
-          background: url("./images/carousel-3.png");
-        }
-        .card7 {
-          background: url("./images/carousel-1.png") ;
-        }
-      </style>
+      <script></script>
+      <style></style>
     </main>
     <footer class="section-footer">
       <div class="container">
