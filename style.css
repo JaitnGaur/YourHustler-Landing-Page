@@ -52,6 +52,7 @@
     cursor: pointer;
     background-color: #dde7f5;
     color: #0C1536;
+  
 }
 .font-white {
     color: #ffffff;
@@ -198,8 +199,8 @@ header.active {
     column-gap: 58px;
 }
 .section-solution {
-    background: url("./images/solution-section-background.png") no-repeat, url("./images/solution-section-background-2.png") top no-repeat;
-    background-size: 100% 100%;
+    background: url("./images/solution-section-background.png") bottom no-repeat, url("./images/solution-section-background-2.png") top no-repeat;
+    background-size: cover;
     min-height: 922px;
 }
 .section-solution__para {
@@ -218,7 +219,7 @@ header.active {
     left: -31px;
 }
 .section-testimonials {
-    padding: 100px 0;
+    padding: 170px 0 100px 0;
 }
 .section-testimonials .container {
     flex-wrap: wrap;
@@ -243,13 +244,37 @@ header.active {
     height: 48px;
     width: 76px;
 }
+.section-contact .container {
+    row-gap: 20px;
+}
+.section-contact__left-div {
+    background-color: #dde7f5;
+    padding: 150px 75px 150px 90px;
+}
+.section-contact__right-div {
+    padding: 150px 75px 150px 90px;
+}
+.section-contact__para {
+    max-width: 390px;
+}
+.section-contact__btn {
+    height: 48px;
+    width: 178px;
+}
 /*-----carousel------*/
-
+.carousel-div {
+    position: relative;
+    top: 304px;
+}
 .card {
     height: 325px;
     width: 380px;
     flex-shrink: 0;
     object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
   }
   .carousel-container {
     display: flex;
@@ -257,30 +282,30 @@ header.active {
     column-gap: 4px;
     overflow: auto;
    scroll-behavior: smooth;
-    
-  
   }
-
+.carousel-text {
+    padding: 15px 0;
+}
   .card1 {
-    background: url("./images/carousel-1.png");
+    background: linear-gradient(to top, rgba(0,0,0,3),transparent,transparent),url("./images/carousel-1.png");
   }
-  .card2 {
-    background: url("./images/carousel-2.png");
+  .card2 { 
+    background: linear-gradient(to top, rgba(0,0,0,3),transparent,transparent),url("./images/carousel-2.png");
   }
   .card3 {
-    background: url("./images/carousel-3.png");
+    background: linear-gradient(to top, rgba(0,0,0,2),transparent,transparent),url("./images/carousel-3.png");
   }
   .card4 {
-    background: url("./images/carousel-1.png");
+    background: linear-gradient(to top, rgba(0,0,0,3),transparent,transparent),url("./images/carousel-1.png");
   }
   .card5 {
-    background: url("./images/carousel-2.png");
+    background: linear-gradient(to top, rgba(0,0,0,3),transparent,transparent),url("./images/carousel-2.png");
   }
   .card6 {
-    background: url("./images/carousel-3.png");
+    background: linear-gradient(to top, rgba(0,0,0,2),transparent,transparent),url("./images/carousel-3.png");
   }
   .card7 {
-    background: url("./images/carousel-1.png");
+    background: linear-gradient(to top, rgba(0,0,0,3),transparent,transparent),url("./images/carousel-1.png");
   }
 
 .nav {
@@ -396,10 +421,22 @@ flex-direction: column;
     .counter-container {
         margin-bottom: 40px;
     }
+    .card {
+        width: 310px;
+    }
 }
 @media(max-width:1024px) {
     .section-footer__social-links {
         text-align: center;
         margin-bottom: 30px;
+        }
+        .section-contact {
+            text-align: center;
+        }
+        .section-contact__left-div,.section-contact__right-div  {
+            padding: 50px;
+        } 
+        .section-contact__btn {
+            margin: 0 auto;
         }
 }
