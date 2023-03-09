@@ -51,35 +51,48 @@ let carouserl_cards = document.querySelectorAll(".card");
 let carousel_container = document.querySelector(".carousel-container");
 
 let carcount = 0;
-let swiperight = 380;
-if(window.outerWidth<=768) {
-    swiperight = 310;
+let swipeRight = 380;
+let swipeRightadd = 380;
+let swipeLeft = 380;
+let swipeLeftadd = 380;
+if (window.outerWidth <= 768) {
+    swipeRight = 310;
+    swipeRightadd = 310;
+    swipeLeft = 310;
+    swipeLeftadd = 310;
+    carcount = 5;
 }
-else swiperight = 380;
+else {
+    swipeRight = 380;
+    swipeRightadd = 380;
+    swipeLeft = 380;
+    swipeLeftadd = 380;
+    carcount = 4
+}
 
 nextone.addEventListener("click", () => {
-    if (carcount < 4) {
+    if (carcount < 5) {
         console.log("next clicked");
-        // carouserl_cards.forEach(
-        //     (i) => (i.style.transform = "translateX(-" + swiperight + "px)")
-        // );
-        carousel_container.scroll(swiperight, 0)
+        carousel_container.scroll(swipeRight, 0)
         carcount += 1;
-        swiperight += 380;
-        goright -= 380;
+        swipeRight += swipeRightadd;
+        swipeLeft -= swipeRightadd;
+    }
+    else {
+        carcount = 0;
+        carousel_container.scroll(0, 0);
+        swipeLeft = swipeLeftadd;
+        swipeRight = swipeRightadd
     }
 });
-let goright = 380;
+
 previous.addEventListener("click", () => {
     if (carcount != 0) {
         console.log("prev clicked");
-        // carouserl_cards.forEach(
-        //     (i) => (i.style.transform = "translateX(" + goright + "px)")
-        // );
-        carousel_container.scroll(-goright, 0)
-        goright += 380;
+        carousel_container.scroll(-swipeLeft, 0)
         carcount -= 1;
-        swiperight -= 380;
-        
+        swipeLeft += swipeLeftadd;
+        swipeRight -= swipeLeftadd;
+
     }
 });
