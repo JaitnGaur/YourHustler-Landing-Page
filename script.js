@@ -52,6 +52,11 @@ let carousel_container = document.querySelector(".carousel-container");
 
 let carcount = 0;
 let swiperight = 380;
+if(window.outerWidth<=768) {
+    swiperight = 310;
+}
+else swiperight = 380;
+
 nextone.addEventListener("click", () => {
     if (carcount < 4) {
         console.log("next clicked");
@@ -75,5 +80,6 @@ previous.addEventListener("click", () => {
         goright += 380;
         carcount -= 1;
         swiperight -= 380;
+        
     }
 });
