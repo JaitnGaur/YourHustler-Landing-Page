@@ -1,3 +1,5 @@
+
+//------animated counter--------
 let counter_container = document.querySelectorAll(".counter-container");
 let counter = document.querySelectorAll(".counter p")
 //console.log(counter_container);

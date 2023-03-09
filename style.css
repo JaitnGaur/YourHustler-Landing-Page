@@ -128,7 +128,10 @@ nav {
 header {
     padding: 16px 0;
     background-color: #ffffff;
-    z-index: 1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 header.active {
     position: sticky;
